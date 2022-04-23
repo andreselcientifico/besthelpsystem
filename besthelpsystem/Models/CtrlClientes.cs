@@ -22,6 +22,7 @@ namespace besthelpsystem.Models
             }
             try
             {
+                
                 MySqlConnection connex = conexion.connection();
                 connex.Open();
                 MySqlCommand comando = new MySqlCommand(sql, connex);

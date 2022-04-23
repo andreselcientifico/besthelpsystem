@@ -35,39 +35,41 @@
             this.Btncerrar = new System.Windows.Forms.Button();
             this.Btnmaximizar = new System.Windows.Forms.Button();
             this.Btnminimizar = new System.Windows.Forms.Button();
-            this.Menuvertical = new System.Windows.Forms.Panel();
-            this.Reportes = new FontAwesome.Sharp.IconButton();
+            this.Panelcontenedor = new System.Windows.Forms.Panel();
             this.Pagos = new FontAwesome.Sharp.IconButton();
             this.Empleados = new FontAwesome.Sharp.IconButton();
             this.Compras = new FontAwesome.Sharp.IconButton();
             this.Ventas = new FontAwesome.Sharp.IconButton();
             this.Clientes = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.Productos = new FontAwesome.Sharp.IconButton();
+            this.Reportes = new FontAwesome.Sharp.IconButton();
             this.SubmenuReportes = new System.Windows.Forms.Panel();
             this.Reportecompras = new FontAwesome.Sharp.IconButton();
             this.Reportepagos = new FontAwesome.Sharp.IconButton();
             this.Reporteventas = new FontAwesome.Sharp.IconButton();
-            this.Logo = new System.Windows.Forms.PictureBox();
-            this.Panelcontenedor = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Barratitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconodeformulario)).BeginInit();
-            this.Menuvertical.SuspendLayout();
+            this.Panelcontenedor.SuspendLayout();
             this.SubmenuReportes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Barratitulo
             // 
-            this.Barratitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.Barratitulo.BackColor = System.Drawing.Color.Red;
+            this.Barratitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Barratitulo.Controls.Add(this.titulodeformulario);
             this.Barratitulo.Controls.Add(this.iconodeformulario);
             this.Barratitulo.Controls.Add(this.Btncerrar);
             this.Barratitulo.Controls.Add(this.Btnmaximizar);
             this.Barratitulo.Controls.Add(this.Btnminimizar);
             this.Barratitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Barratitulo.Location = new System.Drawing.Point(222, 0);
+            this.Barratitulo.Location = new System.Drawing.Point(0, 0);
             this.Barratitulo.Name = "Barratitulo";
-            this.Barratitulo.Size = new System.Drawing.Size(1078, 35);
+            this.Barratitulo.Size = new System.Drawing.Size(1300, 35);
             this.Barratitulo.TabIndex = 0;
             this.Barratitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Barratitulo_MouseDown);
             // 
@@ -83,16 +85,17 @@
             // 
             // iconodeformulario
             // 
-            this.iconodeformulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(25)))), ((int)(((byte)(62)))));
+            this.iconodeformulario.BackColor = System.Drawing.Color.Transparent;
             this.iconodeformulario.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.iconodeformulario.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconodeformulario.IconColor = System.Drawing.Color.CornflowerBlue;
             this.iconodeformulario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconodeformulario.Location = new System.Drawing.Point(6, 2);
+            this.iconodeformulario.Location = new System.Drawing.Point(6, 0);
             this.iconodeformulario.Name = "iconodeformulario";
             this.iconodeformulario.Size = new System.Drawing.Size(32, 32);
             this.iconodeformulario.TabIndex = 3;
             this.iconodeformulario.TabStop = false;
+            this.iconodeformulario.Click += new System.EventHandler(this.iconodeformulario_Click);
             // 
             // Btncerrar
             // 
@@ -103,7 +106,7 @@
             this.Btncerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(3)))));
             this.Btncerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("Btncerrar.Image")));
-            this.Btncerrar.Location = new System.Drawing.Point(1026, 2);
+            this.Btncerrar.Location = new System.Drawing.Point(1246, 2);
             this.Btncerrar.Name = "Btncerrar";
             this.Btncerrar.Size = new System.Drawing.Size(50, 30);
             this.Btncerrar.TabIndex = 2;
@@ -120,7 +123,7 @@
             this.Btnmaximizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
             this.Btnmaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnmaximizar.Image = ((System.Drawing.Image)(resources.GetObject("Btnmaximizar.Image")));
-            this.Btnmaximizar.Location = new System.Drawing.Point(976, 2);
+            this.Btnmaximizar.Location = new System.Drawing.Point(1196, 2);
             this.Btnmaximizar.Name = "Btnmaximizar";
             this.Btnmaximizar.Size = new System.Drawing.Size(50, 30);
             this.Btnmaximizar.TabIndex = 1;
@@ -137,7 +140,7 @@
             this.Btnminimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(165)))), ((int)(((byte)(166)))));
             this.Btnminimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnminimizar.Image = ((System.Drawing.Image)(resources.GetObject("Btnminimizar.Image")));
-            this.Btnminimizar.Location = new System.Drawing.Point(926, 2);
+            this.Btnminimizar.Location = new System.Drawing.Point(1146, 2);
             this.Btnminimizar.Name = "Btnminimizar";
             this.Btnminimizar.Size = new System.Drawing.Size(50, 30);
             this.Btnminimizar.TabIndex = 0;
@@ -145,51 +148,30 @@
             this.Btnminimizar.UseVisualStyleBackColor = false;
             this.Btnminimizar.Click += new System.EventHandler(this.Btnminimizar_Click);
             // 
-            // Menuvertical
+            // Panelcontenedor
             // 
-            this.Menuvertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.Menuvertical.Controls.Add(this.Reportes);
-            this.Menuvertical.Controls.Add(this.Pagos);
-            this.Menuvertical.Controls.Add(this.Empleados);
-            this.Menuvertical.Controls.Add(this.Compras);
-            this.Menuvertical.Controls.Add(this.Ventas);
-            this.Menuvertical.Controls.Add(this.Clientes);
-            this.Menuvertical.Controls.Add(this.iconButton1);
-            this.Menuvertical.Controls.Add(this.SubmenuReportes);
-            this.Menuvertical.Controls.Add(this.Logo);
-            this.Menuvertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Menuvertical.Location = new System.Drawing.Point(0, 0);
-            this.Menuvertical.Name = "Menuvertical";
-            this.Menuvertical.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Menuvertical.Size = new System.Drawing.Size(222, 650);
-            this.Menuvertical.TabIndex = 1;
-            // 
-            // Reportes
-            // 
-            this.Reportes.FlatAppearance.BorderSize = 0;
-            this.Reportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Reportes.ForeColor = System.Drawing.Color.White;
-            this.Reportes.IconChar = FontAwesome.Sharp.IconChar.Bullhorn;
-            this.Reportes.IconColor = System.Drawing.Color.White;
-            this.Reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Reportes.IconSize = 32;
-            this.Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reportes.Location = new System.Drawing.Point(0, 345);
-            this.Reportes.Name = "Reportes";
-            this.Reportes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Reportes.Size = new System.Drawing.Size(222, 32);
-            this.Reportes.TabIndex = 25;
-            this.Reportes.Text = "Reportes";
-            this.Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Reportes.UseVisualStyleBackColor = true;
-            this.Reportes.Click += new System.EventHandler(this.Reportes_Click);
+            this.Panelcontenedor.BackColor = System.Drawing.Color.Black;
+            this.Panelcontenedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Panelcontenedor.Controls.Add(this.Pagos);
+            this.Panelcontenedor.Controls.Add(this.Empleados);
+            this.Panelcontenedor.Controls.Add(this.Compras);
+            this.Panelcontenedor.Controls.Add(this.Ventas);
+            this.Panelcontenedor.Controls.Add(this.Clientes);
+            this.Panelcontenedor.Controls.Add(this.Productos);
+            this.Panelcontenedor.Controls.Add(this.Reportes);
+            this.Panelcontenedor.Controls.Add(this.SubmenuReportes);
+            this.Panelcontenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Panelcontenedor.Location = new System.Drawing.Point(0, 35);
+            this.Panelcontenedor.Name = "Panelcontenedor";
+            this.Panelcontenedor.Size = new System.Drawing.Size(1300, 615);
+            this.Panelcontenedor.TabIndex = 2;
             // 
             // Pagos
             // 
-            this.Pagos.FlatAppearance.BorderSize = 0;
-            this.Pagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Pagos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Pagos.BackColor = System.Drawing.Color.Red;
+            this.Pagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Pagos.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Pagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Pagos.ForeColor = System.Drawing.Color.White;
             this.Pagos.IconChar = FontAwesome.Sharp.IconChar.Bitcoin;
@@ -197,21 +179,23 @@
             this.Pagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Pagos.IconSize = 32;
             this.Pagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Pagos.Location = new System.Drawing.Point(0, 307);
+            this.Pagos.Location = new System.Drawing.Point(879, 217);
             this.Pagos.Name = "Pagos";
             this.Pagos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Pagos.Size = new System.Drawing.Size(222, 32);
-            this.Pagos.TabIndex = 17;
+            this.Pagos.Size = new System.Drawing.Size(170, 120);
+            this.Pagos.TabIndex = 29;
             this.Pagos.Text = "Pagos";
             this.Pagos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Pagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Pagos.UseVisualStyleBackColor = true;
+            this.Pagos.UseVisualStyleBackColor = false;
             this.Pagos.Click += new System.EventHandler(this.Pagos_Click);
             // 
             // Empleados
             // 
-            this.Empleados.FlatAppearance.BorderSize = 0;
-            this.Empleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Empleados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Empleados.BackColor = System.Drawing.Color.Red;
+            this.Empleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Empleados.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Empleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Empleados.ForeColor = System.Drawing.Color.White;
             this.Empleados.IconChar = FontAwesome.Sharp.IconChar.IdCard;
@@ -219,21 +203,23 @@
             this.Empleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Empleados.IconSize = 32;
             this.Empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Empleados.Location = new System.Drawing.Point(0, 269);
+            this.Empleados.Location = new System.Drawing.Point(581, 217);
             this.Empleados.Name = "Empleados";
             this.Empleados.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Empleados.Size = new System.Drawing.Size(222, 32);
-            this.Empleados.TabIndex = 18;
+            this.Empleados.Size = new System.Drawing.Size(170, 120);
+            this.Empleados.TabIndex = 30;
             this.Empleados.Text = "Empleados";
             this.Empleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Empleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Empleados.UseVisualStyleBackColor = true;
+            this.Empleados.UseVisualStyleBackColor = false;
             this.Empleados.Click += new System.EventHandler(this.Empleados_Click);
             // 
             // Compras
             // 
-            this.Compras.FlatAppearance.BorderSize = 0;
-            this.Compras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Compras.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Compras.BackColor = System.Drawing.Color.Red;
+            this.Compras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Compras.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Compras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Compras.ForeColor = System.Drawing.Color.White;
             this.Compras.IconChar = FontAwesome.Sharp.IconChar.Tag;
@@ -241,21 +227,23 @@
             this.Compras.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Compras.IconSize = 32;
             this.Compras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Compras.Location = new System.Drawing.Point(0, 231);
+            this.Compras.Location = new System.Drawing.Point(581, 30);
             this.Compras.Name = "Compras";
             this.Compras.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Compras.Size = new System.Drawing.Size(222, 32);
-            this.Compras.TabIndex = 19;
+            this.Compras.Size = new System.Drawing.Size(170, 120);
+            this.Compras.TabIndex = 31;
             this.Compras.Text = "Compras";
             this.Compras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Compras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Compras.UseVisualStyleBackColor = true;
+            this.Compras.UseVisualStyleBackColor = false;
             this.Compras.Click += new System.EventHandler(this.Compras_Click);
             // 
             // Ventas
             // 
-            this.Ventas.FlatAppearance.BorderSize = 0;
-            this.Ventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Ventas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Ventas.BackColor = System.Drawing.Color.Red;
+            this.Ventas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ventas.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ventas.ForeColor = System.Drawing.Color.White;
             this.Ventas.IconChar = FontAwesome.Sharp.IconChar.Shopify;
@@ -263,21 +251,23 @@
             this.Ventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Ventas.IconSize = 32;
             this.Ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Ventas.Location = new System.Drawing.Point(0, 155);
+            this.Ventas.Location = new System.Drawing.Point(289, 30);
             this.Ventas.Name = "Ventas";
             this.Ventas.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Ventas.Size = new System.Drawing.Size(222, 32);
-            this.Ventas.TabIndex = 21;
+            this.Ventas.Size = new System.Drawing.Size(170, 120);
+            this.Ventas.TabIndex = 33;
             this.Ventas.Text = "Ventas";
             this.Ventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Ventas.UseVisualStyleBackColor = true;
+            this.Ventas.UseVisualStyleBackColor = false;
             this.Ventas.Click += new System.EventHandler(this.Ventas_Click);
             // 
             // Clientes
             // 
-            this.Clientes.FlatAppearance.BorderSize = 0;
-            this.Clientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
+            this.Clientes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Clientes.BackColor = System.Drawing.Color.Red;
+            this.Clientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Clientes.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clientes.ForeColor = System.Drawing.Color.White;
             this.Clientes.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
@@ -285,53 +275,81 @@
             this.Clientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Clientes.IconSize = 32;
             this.Clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Clientes.Location = new System.Drawing.Point(0, 193);
+            this.Clientes.Location = new System.Drawing.Point(289, 217);
             this.Clientes.Name = "Clientes";
             this.Clientes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.Clientes.Size = new System.Drawing.Size(222, 32);
-            this.Clientes.TabIndex = 20;
+            this.Clientes.Size = new System.Drawing.Size(170, 120);
+            this.Clientes.TabIndex = 32;
             this.Clientes.Text = "Clientes";
             this.Clientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Clientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Clientes.UseVisualStyleBackColor = true;
+            this.Clientes.UseVisualStyleBackColor = false;
             this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
             // 
-            // iconButton1
+            // Productos
             // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Laptop;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 117);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.iconButton1.Size = new System.Drawing.Size(222, 32);
-            this.iconButton1.TabIndex = 16;
-            this.iconButton1.Text = "Productos";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.Productos.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Productos.BackColor = System.Drawing.Color.Red;
+            this.Productos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Productos.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.Productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Productos.ForeColor = System.Drawing.Color.White;
+            this.Productos.IconChar = FontAwesome.Sharp.IconChar.Laptop;
+            this.Productos.IconColor = System.Drawing.Color.White;
+            this.Productos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Productos.IconSize = 32;
+            this.Productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Productos.Location = new System.Drawing.Point(879, 30);
+            this.Productos.Name = "Productos";
+            this.Productos.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Productos.Size = new System.Drawing.Size(170, 120);
+            this.Productos.TabIndex = 28;
+            this.Productos.Text = "Productos";
+            this.Productos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Productos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Productos.UseVisualStyleBackColor = false;
+            this.Productos.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // Reportes
+            // 
+            this.Reportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Reportes.BackColor = System.Drawing.Color.Red;
+            this.Reportes.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.Reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reportes.ForeColor = System.Drawing.Color.White;
+            this.Reportes.IconChar = FontAwesome.Sharp.IconChar.Bullhorn;
+            this.Reportes.IconColor = System.Drawing.Color.White;
+            this.Reportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Reportes.IconSize = 32;
+            this.Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reportes.Location = new System.Drawing.Point(1117, 433);
+            this.Reportes.Name = "Reportes";
+            this.Reportes.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.Reportes.Size = new System.Drawing.Size(130, 60);
+            this.Reportes.TabIndex = 34;
+            this.Reportes.Text = "Reportes";
+            this.Reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Reportes.UseVisualStyleBackColor = false;
+            this.Reportes.Click += new System.EventHandler(this.Reportes_Click);
             // 
             // SubmenuReportes
             // 
+            this.SubmenuReportes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SubmenuReportes.BackColor = System.Drawing.Color.Red;
             this.SubmenuReportes.Controls.Add(this.Reportecompras);
             this.SubmenuReportes.Controls.Add(this.Reportepagos);
             this.SubmenuReportes.Controls.Add(this.Reporteventas);
-            this.SubmenuReportes.Location = new System.Drawing.Point(57, 383);
+            this.SubmenuReportes.ForeColor = System.Drawing.Color.White;
+            this.SubmenuReportes.Location = new System.Drawing.Point(1117, 499);
             this.SubmenuReportes.Name = "SubmenuReportes";
-            this.SubmenuReportes.Size = new System.Drawing.Size(165, 104);
-            this.SubmenuReportes.TabIndex = 15;
+            this.SubmenuReportes.Size = new System.Drawing.Size(170, 104);
+            this.SubmenuReportes.TabIndex = 27;
             this.SubmenuReportes.Visible = false;
             // 
             // Reportecompras
             // 
-            this.Reportecompras.FlatAppearance.BorderSize = 0;
+            this.Reportecompras.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Reportecompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.Reportecompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reportecompras.ForeColor = System.Drawing.Color.White;
@@ -353,7 +371,7 @@
             // 
             // Reportepagos
             // 
-            this.Reportepagos.FlatAppearance.BorderSize = 0;
+            this.Reportepagos.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Reportepagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.Reportepagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reportepagos.ForeColor = System.Drawing.Color.White;
@@ -375,7 +393,7 @@
             // 
             // Reporteventas
             // 
-            this.Reporteventas.FlatAppearance.BorderSize = 0;
+            this.Reporteventas.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.Reporteventas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
             this.Reporteventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Reporteventas.ForeColor = System.Drawing.Color.White;
@@ -395,50 +413,48 @@
             this.Reporteventas.UseVisualStyleBackColor = true;
             this.Reporteventas.Click += new System.EventHandler(this.Reporteventas_Click);
             // 
-            // Logo
+            // pictureBox1
             // 
-            this.Logo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Logo.Image = global::besthelpsystem.Properties.Resources.letter_a_key_zpshfhmqr0g;
-            this.Logo.Location = new System.Drawing.Point(0, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(220, 96);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
-            this.Logo.Click += new System.EventHandler(this.Logo_Click);
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::besthelpsystem.Properties.Resources.logoHealth;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(237, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
             // 
-            // Panelcontenedor
+            // panel1
             // 
-            this.Panelcontenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-            this.Panelcontenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panelcontenedor.Location = new System.Drawing.Point(222, 35);
-            this.Panelcontenedor.Name = "Panelcontenedor";
-            this.Panelcontenedor.Size = new System.Drawing.Size(1078, 615);
-            this.Panelcontenedor.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.Color.Red;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 35);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(243, 615);
+            this.panel1.TabIndex = 36;
             // 
             // A1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Panelcontenedor);
             this.Controls.Add(this.Barratitulo);
-            this.Controls.Add(this.Menuvertical);
-            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MdiChildrenMinimizedAnchorBottom = false;
-            this.MinimizeBox = false;
             this.Name = "A1";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.Text = "Besthelp";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.A1_Resize);
             this.Barratitulo.ResumeLayout(false);
             this.Barratitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconodeformulario)).EndInit();
-            this.Menuvertical.ResumeLayout(false);
+            this.Panelcontenedor.ResumeLayout(false);
             this.SubmenuReportes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -446,24 +462,24 @@
         #endregion
 
         private Panel Barratitulo;
-        private Panel Menuvertical;
         private Panel Panelcontenedor;
-        private PictureBox Logo;
-        private Panel SubmenuReportes;
         private Button Btncerrar;
         private Button Btnmaximizar;
         private Button Btnminimizar;
-        private FontAwesome.Sharp.IconButton Reportecompras;
+        private FontAwesome.Sharp.IconPictureBox iconodeformulario;
+        private Label titulodeformulario;
         private FontAwesome.Sharp.IconButton Reportes;
-        private FontAwesome.Sharp.IconButton Reportepagos;
-        private FontAwesome.Sharp.IconButton Reporteventas;
         private FontAwesome.Sharp.IconButton Pagos;
         private FontAwesome.Sharp.IconButton Empleados;
         private FontAwesome.Sharp.IconButton Compras;
         private FontAwesome.Sharp.IconButton Ventas;
         private FontAwesome.Sharp.IconButton Clientes;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconPictureBox iconodeformulario;
-        private Label titulodeformulario;
+        private FontAwesome.Sharp.IconButton Productos;
+        private Panel SubmenuReportes;
+        private FontAwesome.Sharp.IconButton Reportecompras;
+        private FontAwesome.Sharp.IconButton Reportepagos;
+        private FontAwesome.Sharp.IconButton Reporteventas;
+        private PictureBox pictureBox1;
+        private Panel panel1;
     }
 }

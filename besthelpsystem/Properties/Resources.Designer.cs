@@ -83,6 +83,16 @@ namespace besthelpsystem.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoHealth {
+            get {
+                object obj = ResourceManager.GetObject("logoHealth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_clipart_christian_cross_symbol_computer_icons_american_red_cross_christian_cross_angle_christianity {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-christian-cross-symbol-computer-icons-american-red-cross-christian-cr" +
@@ -147,6 +157,26 @@ namespace besthelpsystem.Properties {
         internal static System.Drawing.Bitmap Sin_título_31 {
             get {
                 object obj = ResourceManager.GetObject("Sin título-31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock_photo_man_in_gym_or_fitness {
+            get {
+                object obj = ResourceManager.GetObject("stock-photo-man-in-gym-or-fitness", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stock_photo_man_in_gym_or_fitness1 {
+            get {
+                object obj = ResourceManager.GetObject("stock-photo-man-in-gym-or-fitness1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
