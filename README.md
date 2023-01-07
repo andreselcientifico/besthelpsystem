@@ -1,3 +1,3 @@
 besthelpsystem
 
-este sistemma funciona para  empresas 
+este sistema funciona para  empresas 
